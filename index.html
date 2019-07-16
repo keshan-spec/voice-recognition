@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Voice Recognition</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <div class="nav">
+          Speech Recognition
+        <i class="fa fa-microphone" id="icon" aria-hidden="true"></i>
+      </div>
+    <div class="main">
+      <div class="left">
+        <input class="speech-text" id="text-feild"></input>
+            <div class="button_h">
+                        <button id="start-record-btn" class="button" title="Start Recording" onclick="
+                            ToggleButton()">
+                            Start Recording
+                            <i class="fa fa-microphone" id="icon" aria-hidden="true"></i>
+                        </button>
+            </div>
+        <p id="instructions"></p>
+      </div>
+      <div class="right">
+        <div class="results">
+          <h1>Results</h1>
+          <ul>
+            <li>
+              <a href="stackoverflow.com" class="result_heading" target="_"
+                >Stackoverflow</a
+              >
+              <p class="result_txt">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Incidunt voluptatum voluptatibus eaque eligendi, beatae odit.
+                Reprehenderit sequi facilis eum et quasi nulla assumenda rerum
+                voluptate modi temporibus inventore, vel consequatur.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

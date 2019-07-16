@@ -1,0 +1,134 @@
+@mixin flexbox($direction) {
+  display: flex;
+  flex: 1;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// fonts
+@import url("https://fonts.googleapis.com/css?family=DM+Sans|Muli&display=swap");
+$speech: "DM Sans", sans-serif;
+$default: "Muli", sans-serif;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  @include flexbox(row);
+  font-family: $default;
+  font-size: 20px;
+  color: azure;
+
+  i {
+    margin-left: 15px;
+    font-size: 18px;
+    padding: 0;
+  }
+}
+
+.main {
+  @include flexbox(column);
+  max-width: 90vw;
+  width: 100%;
+  padding: 25px;
+  overflow-x: hidden;
+  font-family: $default;
+
+  .left {
+    height: 250px;
+    margin: 15px;
+    width: 100%;
+    @include flexbox(column);
+
+    .speech-text {
+      background-color: azure;
+      border-radius: 12px;
+      width: 100%;
+      height: 100% - 30%;
+      @include flexbox(row);
+      font-family: $speech;
+      outline: none;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .button {
+      text-align: center;
+      margin-top: 15px;
+      width: 300px;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 10px 5px;
+      outline: none;
+      border: 1px solid black;
+      letter-spacing: 2px;
+      border-radius: 15px;
+      background: none;
+      align-self: center;
+      font-weight: bold;
+    }
+
+    i {
+      margin-left: 5px;
+      font-size: 13px;
+    }
+    #instructions {
+      width: 100%;
+      padding: 5px 0 5px 0;
+      text-align: center;
+    }
+  }
+
+  .right {
+    height: inherit;
+    padding-bottom: 15px;
+    width: 100%;
+
+    .results {
+      text-align: justify;
+      width: 100%;
+      h1 {
+        font-size: 30px;
+        padding: 10px 0 0 10px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      li {
+        padding: 5px 10px 5px 5px;
+        background-color: aliceblue;
+        margin-top: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        letter-spacing: 1px;
+        display: block;
+      }
+      .result_heading {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+      }
+
+      .result_txt {
+        margin: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+}
